@@ -1,0 +1,52 @@
+> node index.js
+# create java script file named index.js
+
+> npm init
+# starting npm -> can install npm modules
+
+> npm install figlet
+# installing figlet package
+# npm install figlet -g -> apply installing figlet to my whole computer
+# package-lock.json file created
+# inside:
+#       "dependencies": {
+#        "figlet": "^1.6.0"
+#      }
+# means that Backend-Study folder uses figlet module in version 1.6.0
+
+# node_modules folder created
+# figlet package saved
+
+What is express?
+-> Using node.js, we can make web framework with the help of express
+-> web framework: request, response
+
+# code - index.js
+var figlet = require("figlet");
+
+figlet("Hello World!!", function (err, data) {
+  if (err) {
+    console.log("Something went wrong...");
+    console.dir(err);
+    return;
+  }
+  console.log(data);
+});
+# execute
+
+> npm uninstall figlet
+
+> npm install express
+
+# code - index.js
+const express = require('express')
+const app = express()
+
+
+app.get('/', function (req, res) {
+  res.send('Hello World')
+})
+
+app.listen(3000)
+# execute
+# chrome - localhost:3000
