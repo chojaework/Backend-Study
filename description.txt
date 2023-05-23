@@ -1,3 +1,6 @@
+# node.js: runs java script
+# npm: serves tools and modules
+
 > node index.js
 # create java script file named index.js
 
@@ -19,7 +22,7 @@
 
 What is express?
 -> Using node.js, we can make web framework with the help of express
--> web framework: request, response
+-> web framework: receive request and return response
 
 # code - index.js
 var figlet = require("figlet");
